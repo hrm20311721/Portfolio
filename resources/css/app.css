@@ -1,0 +1,62 @@
+/***** header *****/
+.header-nav{
+    text-align: right;
+    justify-content: space-between;
+    max-width: 960px;
+    position: absolute;
+    bottom: 10%;
+    right: 13%;
+    z-index: 1;
+    color: white;
+}
+
+.header-nav a{
+    color: white;
+    font-size: 1.5rem;
+}
+.nav-item{
+    width: 80px;
+    height: 80px;
+    background-color: #47c89d;
+    margin: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/***** End header *****/
+
+/***** fv *****/
+.fv{
+    background-image:url('../storage/img/IMG_4690.JPG');
+    background-position: center;
+    background-size: cover;
+    opacity: .8;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    min-height: 600px;
+    padding: 0;
+}
+
+.fv-copy{
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    transform: translateY(-50%);
+    border: white solid 2px;
+    color: white;
+    padding: 20px 20px;
+}
+
+.fv-main-copy{
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.fv-sub-copy{
+    font-size: 1.6rem;
+}
+
+/***** End fv *****/

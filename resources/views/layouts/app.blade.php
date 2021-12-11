@@ -18,6 +18,7 @@
 
         <!-- Style -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,39 +28,9 @@
     </head>
     <body>
         <header class="header container-lg">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="col-3 site-title">
-                    <h1 class="mb-0">Site-title</h1>
-                </div>
-                <div class="col-9 header-nav">
-                    <nav class="navbar navbar-expand-md navbar-light">
-                        <div class="container justify-content-end">
-                            <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" aria-controls="header-nav"
-                                aria-expanded="false" aria-label="Toggle Header menu">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse mt-2 mt-md-0 justify-content-end" id="header-nav">
-                                <ul class="navbar-nav text-end">
-                                    <li class="nav-item ms-3">
-                                        <a class="nav-link" href="#">About</a>
-                                    </li>
-                                    <li class="nav-item ms-3">
-                                        <a class="nav-link" href="#">Skills</a>
-                                    </li>
-                                    <li class="nav-item ms-3">
-                                        <a class="nav-link" href="#">Portfolio</a>
-                                    </li>
-                                    <li class="nav-item ms-3">
-                                        <a class="nav-link" href="#">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+
         </header>
-        <main class="main container-lg">
+        <main class="main">
             @yield('content')
         </main>
         <footer class="footer container">

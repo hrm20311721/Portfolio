@@ -1,3 +1,75 @@
+/***** base *****/
+.parallax{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 300px;
+    perspective-origin: center center;
+}
+.section-wrapper{
+    max-width: 1200px;
+    min-height: 550px;
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.section-inner{
+    margin: 80px auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.layer0{
+    transform: translateZ(0);
+    z-index: 3;
+}
+
+.layer1{
+    transform: translateZ(-300px) scale(2);
+    z-index: 2;
+}
+
+.layer2{
+    transform: translateZ(100px) scale(0.66);
+    z-index: 1;
+}
+
+.section-title{
+    height: 40vh;
+    width: 40vh;
+    border-radius: 50%;
+    background-color: #47c89d;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    opacity: .3;
+    font-size: 5rem;
+}
+
+.bubble{
+    width: 30vh;
+    height: 30vh;
+    top:70%;
+    left:50%;
+    background-image: radial-gradient(#2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+    border-radius: 50%;
+    opacity: 0.5;
+    position:relative;
+}
+
+.right{
+    margin: 0 0 0 auto;
+}
+
+.blue{
+    background-color: #4CBDD5;
+}
+
+/***** End base *****/
 /***** header *****/
 .header-nav{
     text-align: right;
@@ -22,6 +94,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow:0 0 1.5rem rgb(0 0 0 / 1);
 }
 /***** End header *****/
 
@@ -33,7 +106,7 @@
     opacity: .8;
     position: relative;
     top: 0;
-    z-index: 1;
+    z-index: 0;
     width: 100vw;
     height: 100vh;
     min-height: 600px;
@@ -60,3 +133,27 @@
 }
 
 /***** End fv *****/
+
+/***** about *****/
+#about{
+    z-index: 1;
+}
+.about-content{
+    z-index: 3;
+}
+/***** End about *****/
+
+/***** skills *****/
+#skills{
+    z-index: 2;
+}
+
+.card{
+    height: 25vw;
+    width: 25vw;
+    margin-left: 20px;
+}
+/***** End skills *****/
+/***** portfolio *****/
+
+/***** End portfolio *****/

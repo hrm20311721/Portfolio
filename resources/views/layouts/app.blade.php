@@ -33,7 +33,7 @@
         <main class="main">
             @yield('content')
         </main>
-        <footer class="footer container">
+        <footer class="footer container border-top pt-3">
             <div class="row justify-content-between align-items-center">
                 <div class="footer-logo d-flex flex-column justify-content-center align-items-center col-4">
                     <img src="{{ asset('storage/img/Logo.jpg') }}" alt="" class="img-fluid" width="80" height="80">

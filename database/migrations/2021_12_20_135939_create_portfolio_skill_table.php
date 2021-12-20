@@ -13,7 +13,7 @@ class CreatePortfolioSkillTable extends Migration
      */
     public function up()
     {
-        Schema::create('portfolio_skill', function (Blueprint $table) {
+        Schema::create('portfolio_skills', function (Blueprint $table) {
             $table->unsignedBigInteger('portfolio_id');
             $table->unsignedBigInteger('skill_id');
             $table->primary(['portfolio_id','skill_id']); //同じ組み合わせが重複しないように。

@@ -43,9 +43,8 @@ window.onload = function() {
 
             $(window).on('scroll', function () {
                 let scroll = $(window).scrollTop();
-
                 let topPos = top - scroll / 3;
-                
+
                 if (scroll>topPos) {
                     $this.css('top', topPosition);
                 } else {

@@ -28,6 +28,9 @@
                                 <a class="nav-link" href="#portfolio">Portfolio</a>
                             </li>
                             <li class="nav-item ms-3 rounded-circle">
+                                <a class="nav-link" href="#!">Blog</a>
+                            </li>
+                            <li class="nav-item ms-3 rounded-circle">
                                 <a class="nav-link" href="#contact">Contact</a>
                             </li>
                         </ul>
@@ -40,12 +43,10 @@
 <!-- ========== End fv ========== -->
 <!-- ========== Start about ========== -->
 <div class="container-lg section-wrapper" id="about">
-    <div class="layer2">
-        <div class="section-title right">
-            <p>about</p>
-        </div>
+    <div class="section-title right">
+        <p>about</p>
     </div>
-    <div class="row align-items-center layer0 about-content">
+    <div class="row align-items-center about-content">
         <div class="col-4 py-5 profile-picture">
             <img src="{{ asset('storage/img/IMG_4691_square.jpg')}}" alt="profile picture" class="rounded-circle w-100">
         </div>
@@ -59,9 +60,6 @@
             <p class="fs-4 profile-text jp">
                 初めまして。フリーランスwebエンジニアのhrm20311721です。’21年9月にプログラミングの勉強を始めたばかりです。自ら考えたモノをカタチにしていく達成感に夢中になっています。詳しい経歴は<a href="#brief-history" data-bs-toggle="modal">こちら.</a></p>
         </div>
-    </div>
-    <div class="layer1">
-        <div class="bubble" id="bubble_1"></div>
     </div>
 </div>
 <!-- ========== End about ========== -->
@@ -77,7 +75,7 @@
             <div class="brief-history">
                 <div class="history current">
                     <span></span>
-                    <div class="history-content">
+                    <div class="history-content current">
                         <label for="2012" class="history-year">2012</label>
                         <p class="history-heading">中東のオアシス、ドバイへ</p>
                         <p class="history-text">大学を休学し、ドバイへ。日系企業にて総務を担当。イスラム圏の人々との感覚の違いに悩まされながら、相手の立場を考えることの大切さを学びました。</p>
@@ -144,262 +142,251 @@
 <!-- ========== End brief history ========== -->
 <!-- ========== Start Skills ========== -->
 <div class="section-wrapper container-lg" id="skills">
-    <div class="layer2">
-        <div class="section-title blue">
-            <p>skills</p>
-        </div>
+    <div class="section-title blue">
+        <p>skills</p>
     </div>
-    <div class="layer0">
-        <div class="row gx-5 px-4 gy-5 gy-lg-0">
-            <!-- card_1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="flip-box">
-                    <div class="flip">
-                        <!-- card_front -->
-                        <div class="flip-body front">
-                            <div class="d-flex align-items-center justify-content-center h-100">
-                                <h3 class="card-title h2 text-center">Front-end</h3>
-                            </div>
+    <div class="row gx-5 px-4 gy-5 gy-lg-0 skills">
+        <!-- card_1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="flip-box">
+                <div class="flip">
+                    <!-- card_front -->
+                    <div class="flip-body front">
+                        <div class="d-flex align-items-center justify-content-center h-100">
+                            <h3 class="card-title h2 text-center">Front-end</h3>
                         </div>
-                        <!-- card_back -->
-                        <div class="flip-body back">
-                            <div class="h-100 py-5">
-                                <ul class="card-text list-unstyled w-100 h-100 d-flex flex-column justify-content-evenly">
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">HTML</p>
-                                        </div>
-                                        <div class="col-7 d-flex align-items-center justify-content-evenly">
-                                            <span class="ripples"></span>
-                                            <span class="ripples"></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">CSS</p>
-                                        </div>
-                                        <div class="col-7 d-flex justify-content-evenly">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">JavaScript</p>
-                                        </div>
-                                        <div class="col-7 d-flex justify-content-evenly">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">jQuery</p>
-                                        </div>
-                                        <div class="col-7 d-flex justify-content-evenly">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                    </div>
+                    <!-- card_back -->
+                    <div class="flip-body back">
+                        <div class="h-100 py-5">
+                            <ul class="card-text list-unstyled w-100 h-100 d-flex flex-column justify-content-evenly">
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">HTML</p>
+                                    </div>
+                                    <div class="col-7 d-flex align-items-center justify-content-evenly">
+                                        <span class="ripples"></span>
+                                        <span class="ripples"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">CSS</p>
+                                    </div>
+                                    <div class="col-7 d-flex justify-content-evenly">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">JavaScript</p>
+                                    </div>
+                                    <div class="col-7 d-flex justify-content-evenly">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">jQuery</p>
+                                    </div>
+                                    <div class="col-7 d-flex justify-content-evenly">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- card_2 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="flip-box">
-                    <div class="flip">
-                        <!-- card_front -->
-                        <div class="flip-body front">
-                            <div class="d-flex align-items-center justify-content-center h-100">
-                                <h3 class="card-title h2 text-center">Back-end</h3>
-                            </div>
+        </div>
+        <!-- card_2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="flip-box">
+                <div class="flip">
+                    <!-- card_front -->
+                    <div class="flip-body front">
+                        <div class="d-flex align-items-center justify-content-center h-100">
+                            <h3 class="card-title h2 text-center">Back-end</h3>
                         </div>
-                        <!-- card_back -->
-                        <div class="flip-body back">
-                            <div class="h-100 py-5">
-                                <ul class="card-text list-unstyled w-100 h-100 d-flex flex-column justify-content-evenly">
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">PHP</p>
-                                        </div>
-                                        <div class="col-7 d-flex justify-content-evenly">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">Laravel</p>
-                                        </div>
-                                        <div class="col-7 d-flex justify-content-evenly">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                    </div>
+                    <!-- card_back -->
+                    <div class="flip-body back">
+                        <div class="h-100 py-5">
+                            <ul class="card-text list-unstyled w-100 h-100 d-flex flex-column justify-content-evenly">
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">PHP</p>
+                                    </div>
+                                    <div class="col-7 d-flex justify-content-evenly">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">Laravel</p>
+                                    </div>
+                                    <div class="col-7 d-flex justify-content-evenly">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- card_3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="flip-box">
-                    <div class="flip">
-                        <!-- card_front -->
-                        <div class="flip-body front">
-                            <div class="d-flex align-items-center justify-content-center h-100">
-                                <h3 class="card-title h2 text-center">Others</h3>
-                            </div>
+        </div>
+        <!-- card_3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="flip-box">
+                <div class="flip">
+                    <!-- card_front -->
+                    <div class="flip-body front">
+                        <div class="d-flex align-items-center justify-content-center h-100">
+                            <h3 class="card-title h2 text-center">Others</h3>
                         </div>
-                        <!-- card_back -->
-                        <div class="flip-body back">
-                            <div class="h-100 py-5">
-                                <ul class="card-text list-unstyled w-100 h-100 d-flex flex-column justify-content-evenly">
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">GAS</p>
-                                        </div>
-                                        <div class="col-7 d-flex justify-content-evenly">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">VBA</p>
-                                        </div>
-                                        <div class="col-7 d-flex justify-content-evenly">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">TOEIC</p>
-                                        </div>
-                                        <div class="col-7 d-flex justify-content-evenly">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li class="row d-flex align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <p class="m-0 fs-5">Accounting</p>
-                                        </div>
-                                        <div class="col-7 d-flex justify-content-evenly">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                    </div>
+                    <!-- card_back -->
+                    <div class="flip-body back">
+                        <div class="h-100 py-5">
+                            <ul class="card-text list-unstyled w-100 h-100 d-flex flex-column justify-content-evenly">
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">GAS</p>
+                                    </div>
+                                    <div class="col-7 d-flex justify-content-evenly">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">VBA</p>
+                                    </div>
+                                    <div class="col-7 d-flex justify-content-evenly">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">TOEIC</p>
+                                    </div>
+                                    <div class="col-7 d-flex justify-content-evenly">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li class="row d-flex align-items-center justify-content-between">
+                                    <div class="col-5">
+                                        <p class="m-0 fs-5">Accounting</p>
+                                    </div>
+                                    <div class="col-7 d-flex justify-content-evenly">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="layer1">
-    <div class="bubble" id="bubble_1"></div>
 </div>
 <!-- ========== End Skills ========== -->
 <!-- ========== Start Portfolio ========== -->
 <div class="section-wrapper container-lg" id="portfolio">
-    <div class="layer2">
-        <div class="section-title right">
-            <p>portfolio</p>
-        </div>
+    <div class="section-title right">
+        <p>portfolio</p>
     </div>
-    <div class="layer0">
-        <div class="portfolio row">
-            <div class="col-md-6 pb-3 pe-3">
-                <div class="portfolio-item border-bottom border-end p-5 h-100">
-                    <a href="#modal" class="work-title fs-4" data-bs-toggle="modal">Coding from XD</a>
-                    <div class="using">
-                        <p>HTML / CSS / jQuery</p>
-                    </div>
-                    <div class="work-comment">
-                        <p><a href="" class="link-info">クリスタ</a>さんのXDデザインサンプルからのコーディング。<br>ファーストビューのスライドショーは、サンプルコードではjQueryのプラグインを使っていましたが、keyframeでアニメーションを設定して作成しました。
-                        </p>
-                    </div>
+    <div class="portfolio row">
+        <div class="col-md-6 pb-3 pe-3">
+            <div class="portfolio-item border-bottom border-end p-5 h-100">
+                <a href="#work-modal" class="work-title fs-4" data-bs-toggle="modal">Coding from XD</a>
+                <div class="using">
+                    <p>HTML / CSS / jQuery</p>
                 </div>
-            </div>
-            <div class="col-md-6 pb-3 pe-3">
-                <div class="portfolio-item border-bottom border-end p-5 h-100">
-                    <a href="#modal" class="work-title fs-4" data-bs-toggle="modal">Attendance Record</a>
-                    <div class="using">
-                        <p>PHP / laravel / HTML / CSS / Bootstrap / jQuery</p>
-                    </div>
-                    <div class="work-comment">
-                        <p>初めて一から作成したアプリ。<br>ログイン機能はメールアドレスではなくIDを使う形式にし、権限によるルート制御を設定しました。単純な画面推移によるCRUD機能だけではなく、Bootstrapのモーダルを使用しajaxでコンテンツ取得、POST送信などにチャレンジしました。
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 pb-3 pe-3">
-                <div class="portfolio-item border-bottom border-end p-5 h-100">
-                    <a href="#modal" class="work-title fs-4" data-bs-toggle="modal">Quotation, Order, Invoice managiment app.</a>
-                    <div class="using">
-                        <p>Google Apps Script / Google Spread Sheet</p>
-                    </div>
-                    <div class="work-comment">
-                        <p>アウトソーシングサイトからの依頼で作成。<br>見積書や注文書を作成し、作成した内容やスプレッドシート上で送信された注文データをデータベース登録、PDF発行というプログラムを組みました。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 pb-3 pe-3">
-                <div class="portfolio-item border-bottom border-end p-5 h-100">
-                    <a href="#modal" class="work-title fs-4" data-bs-toggle="modal">Portfolio Site</a>
-                    <div class="using">
-                        <p>HTML / CSS / Bootstrap / laravel</p>
-                    </div>
-                    <div class="work-comment">
-                        <p>このポートフォリオサイト。<br>フォームのバリデーションなど簡単に実装できるためlaravelを利用しました。レイアウトの一部にBootstrapを使用しました。ダイビングが趣味なので海をイメージし、泡などをパララックスに表現しました。
-                        </p>
-                    </div>
+                <div class="work-comment">
+                    <p><a href=""
+                            class="link-info">クリスタ</a>さんのXDデザインサンプルからのコーディング。<br>ファーストビューのスライドショーは、サンプルコードではjQueryのプラグインを使っていましたが、keyframeでアニメーションを設定して作成しました。
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="col-md-6 pb-3 pe-3">
+            <div class="portfolio-item border-bottom border-end p-5 h-100">
+                <a href="#work-modal" class="work-title fs-4" data-bs-toggle="modal">Attendance Record</a>
+                <div class="using">
+                    <p>PHP / laravel / HTML / CSS / Bootstrap / jQuery</p>
+                </div>
+                <div class="work-comment">
+                    <p>初めて一から作成したアプリ。<br>ログイン機能はメールアドレスではなくIDを使う形式にし、権限によるルート制御を設定しました。単純な画面推移によるCRUD機能だけではなく、Bootstrapのモーダルを使用しajaxでコンテンツ取得、POST送信などにチャレンジしました。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 pb-3 pe-3">
+            <div class="portfolio-item border-bottom border-end p-5 h-100">
+                <a href="#work-modal" class="work-title fs-4" data-bs-toggle="modal">Quotation, Order, Invoice managiment
+                    app.</a>
+                <div class="using">
+                    <p>Google Apps Script / Google Spread Sheet</p>
+                </div>
+                <div class="work-comment">
+                    <p>アウトソーシングサイトからの依頼で作成。<br>見積書や注文書を作成し、作成した内容やスプレッドシート上で送信された注文データをデータベース登録、PDF発行というプログラムを組みました。</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 pb-3 pe-3">
+            <div class="portfolio-item border-bottom border-end p-5 h-100">
+                <a href="#work-modal" class="work-title fs-4" data-bs-toggle="modal">Portfolio Site</a>
+                <div class="using">
+                    <p>HTML / CSS / Bootstrap / laravel</p>
+                </div>
+                <div class="work-comment">
+                    <p>このポートフォリオサイト。<br>フォームのバリデーションなど簡単に実装できるためlaravelを利用しました。レイアウトの一部にBootstrapを使用しました。ダイビングが趣味なので海をイメージし、泡などをパララックスに表現しました。
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>
-<div class="work-modal modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="#portfolio"
-    aria-hidden="true">
+<div class="modal fade" id="work-modal" tabindex="-1" role="dialog" aria-labelledby="#portfolio" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content rounded-0">
             <div id="portfolio_slide" class="carousel slide" data-bs-interval="false">
@@ -428,17 +415,14 @@
         </div>
     </div>
 </div>
-
 <!-- ========== End Portfolio ========== -->
 <!-- ========== Start Contact ========== -->
 <div class="section-wrapper container-lg" id="contact">
-    <div class="layer2">
-        <div class="section-title blue">
-            <p>Contact</p>
-        </div>
+    <div class="section-title blue">
+        <p>Contact</p>
     </div>
-    <div class="layer0">
-        <form action="" class="contact-form container-md">
+    <form action="" class="contact-form row justify-content-center">
+        <div class="col-12">
             <div class="form_name mb-3">
                 <label for="name" class="form-label fs-5">お名前</label>
                 <input class="form-control" type="text" name="name">
@@ -462,10 +446,25 @@
             <div class="form_submit mt-5 text-center">
                 <input class="btn btn-info text-white fs-5" type="submit" value="送信">
             </div>
-        </form>
-    </div>
-
+        </div>
+    </form>
 </div>
 <!-- ========== End Contact ========== -->
 
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
+<div class="bubble" id="bubble_1"></div>
 @endsection

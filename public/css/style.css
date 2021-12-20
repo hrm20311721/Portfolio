@@ -3,10 +3,12 @@ body{
     font-family: "Zen Maru Gothic","Noto Sans JP";
     background-color: #f3fbfc;
 }
+
 .section-wrapper{
     max-width: 1200px;
     min-height: 550px;
-    margin: 80px auto;
+    margin: 110px auto;
+    padding: 70px 30px;
     position: relative;
     transform-style: preserve-3d;
 
@@ -19,23 +21,28 @@ body{
     background-color: #47c89d;
     display: flex;
     justify-content: center;
-    align-items:end;
+    align-items:center;
     opacity: .3;
     font-size: 5rem;
+    position:absolute;
+    top: -100px;
+    z-index:-1;
 }
 
 .bubble{
-    width: 30vh;
-    height: 30vh;
+    width: 100px;
+    height: 100px;
     background-image: radial-gradient(circle at 30% 25%,#fff 0%,#2CD8D5 40%, #C5C1FF 80%, #FFBAC3 100%);
     border-radius: 50%;
-    opacity: 0.2;
-    position:relative;
-    box-shadow: -5px -5px 10px rgb(95,111,114,.5)inset,5px 5px 5px rgb(255,255,255) inset, 30px 60px 60px -20px rgb(0,0,0,.3);
+    opacity: 0.1;
+    position:absolute;
+    box-shadow: -5px -5px 10px rgb(95,111,114,.5)inset,5px 5px 5px rgb(255,255,255) inset, 15px 20px 20px -10px rgb(0,0,0,.3);
+    animation: swing 10s infinite 0s ease-in-out;
+    display: block;
 }
 
 .right{
-    margin: 0 0 0 auto;
+    right:0px;
 }
 
 .blue{
@@ -44,6 +51,31 @@ body{
 
 .en{
     display: none;
+}
+
+.modal-dialog{
+    z-index: 1000;
+}
+
+@keyframes swing{
+    0%{
+        transform: translate(0,0);
+    }
+    15%{
+        transform: translate(40px,0);
+    }
+    28%{
+        transform: translate(-30px,0);
+    }
+    50%{
+        transform: translate(60px,0);
+    }
+    65%{
+        transform: translate(-50px,0);
+    }
+    100%{
+        transform: translate(0,0);
+    }
 }
 
 /***** End base *****/
@@ -63,6 +95,11 @@ body{
     color: white;
     font-size: 1.5rem;
 }
+
+.header-nav a:hover{
+    color: white;
+    opacity: 0.7;
+}
 .nav-item{
     width: 80px;
     height: 80px;
@@ -72,6 +109,16 @@ body{
     align-items: center;
     justify-content: center;
     box-shadow:0 0 1.5rem rgb(0 0 0 / 1);
+}
+.nav-item:hover::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #47c89d;
+    animation: ripple 1s infinite ease-out;
 }
 /***** End header *****/
 
@@ -113,8 +160,8 @@ body{
 /***** End fv *****/
 
 /***** about *****/
-#about{
-    z-index: 1;
+.about-content{
+    padding: 70px 0;
 }
 
 .profile-name{
@@ -189,7 +236,21 @@ body{
     animation: ripple 2s infinite ease-out;
 }
 
+.history-content.current{
+    animation: flipLeft 1.5s forwards ease-out;
+}
 
+@keyframes flipLeft{
+    0%{
+        transform: perspective(600px) translate3d(0,30px,0) rotateY(30deg);
+        opacity: 0;
+    }
+    100%{
+        transform: perspective(600px) translate3d(0,0,0)
+        rotateY(0deg);
+        opacity: 1;
+    }
+}
 
 .history{
     display: flex;
@@ -202,6 +263,8 @@ body{
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
     padding: 10px 35px;
     background-color: white;
+    opacity:0;
+    transition:3s;
 }
 
 .history-year{
@@ -220,6 +283,11 @@ body{
 /***** skills *****/
 #skills{
     z-index: 2;
+}
+
+.skills{
+    padding: 70px 0;
+    margin: 70px 0;
 }
 
 .flip-box{
@@ -300,6 +368,8 @@ body{
 .portfolio{
     display: flex;
     flex-wrap: wrap;
+    padding: 70px 0;
+    margin: 70px 0;
 }
 
 .portfolio-item{
@@ -322,12 +392,12 @@ body{
     border-bottom-color: #f3fbfc;
     background-color: #f3fbfc;
     overflow: hidden;
-    transition: all .7s ease-in;
+    transition: all .5s ease-out;
 }
 
 .portfolio-item:hover::after{
-    border-width: 30px;
-    box-shadow: 0 0 20px 0 rgb(0,0,0,.3);
+    border-width: 40px;
+    box-shadow: 0 0 30px 0 rgb(0,0,0,.3);
 }
 .carousel-indicators{
     z-index: 2;
@@ -351,6 +421,8 @@ body{
 /***** contact *****/
 .contact-form{
     max-width: 600px;
+    padding: 70px 0;
+    margin: 70px auto;
 }
 
 .form_submit .btn{

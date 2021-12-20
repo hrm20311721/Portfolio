@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Portfolio_skill extends Model
 {
+
     public $timestamps = false; //update_at, created_atを無効に
+
 }

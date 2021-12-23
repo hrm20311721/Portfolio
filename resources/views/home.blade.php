@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app-layout>
 <!-- ========== Start fv ========== -->
 <div class="fv" id="fv">
     <div class="fv-copy">
@@ -160,54 +158,22 @@
                     <div class="flip-body back">
                         <div class="h-100 py-5">
                             <ul class="card-text list-unstyled w-100 h-100 d-flex flex-column justify-content-evenly">
-                                <li class="row d-flex align-items-center justify-content-between">
-                                    <div class="col-5">
-                                        <p class="m-0 fs-5">HTML</p>
-                                    </div>
-                                    <div class="col-7 d-flex align-items-center justify-content-evenly">
-                                        <span class="ripples"></span>
-                                        <span class="ripples"></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
-                                <li class="row d-flex align-items-center justify-content-between">
-                                    <div class="col-5">
-                                        <p class="m-0 fs-5">CSS</p>
-                                    </div>
-                                    <div class="col-7 d-flex justify-content-evenly">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
-                                <li class="row d-flex align-items-center justify-content-between">
-                                    <div class="col-5">
-                                        <p class="m-0 fs-5">JavaScript</p>
-                                    </div>
-                                    <div class="col-7 d-flex justify-content-evenly">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
-                                <li class="row d-flex align-items-center justify-content-between">
-                                    <div class="col-5">
-                                        <p class="m-0 fs-5">jQuery</p>
-                                    </div>
-                                    <div class="col-7 d-flex justify-content-evenly">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
+                                @foreach ($skills['front'] as $skill)
+                                    <li class="row d-flex align-items-center justify-content-between">
+                                        <div class="col-5">
+                                            <p class="m-0 fs-5">{{$skill->name_en}}</p>
+                                        </div>
+                                        <div class="col-7 d-flex align-items-center justify-content-evenly">
+                                            @for ($i = 1; $i <= 5; $i++)
+                                                @if ($skill->levels >= $i)
+                                                    <span class="ripples"></span>
+                                                @else
+                                                    <span></span>
+                                                @endif
+                                            @endfor
+                                        </div>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -228,30 +194,21 @@
                     <div class="flip-body back">
                         <div class="h-100 py-5">
                             <ul class="card-text list-unstyled w-100 h-100 d-flex flex-column justify-content-evenly">
+                                @foreach ($skills['back'] as $skill)
                                 <li class="row d-flex align-items-center justify-content-between">
                                     <div class="col-5">
-                                        <p class="m-0 fs-5">PHP</p>
+                                        <p class="m-0 fs-5">{{$skill->name_en}}</p>
                                     </div>
-                                    <div class="col-7 d-flex justify-content-evenly">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
-                                <li class="row d-flex align-items-center justify-content-between">
-                                    <div class="col-5">
-                                        <p class="m-0 fs-5">Laravel</p>
-                                    </div>
-                                    <div class="col-7 d-flex justify-content-evenly">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
+                                    <div class="col-7 d-flex align-items-center justify-content-evenly">
+                                        @for ($i = 1; $i <= 5; $i++) @if ($skill->levels >= $i)
+                                            <span class="ripples"></span>
+                                            @else
+                                            <span></span>
+                                            @endif
+                                            @endfor
                                     </div>
                                 </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -272,54 +229,21 @@
                     <div class="flip-body back">
                         <div class="h-100 py-5">
                             <ul class="card-text list-unstyled w-100 h-100 d-flex flex-column justify-content-evenly">
+                                @foreach ($skills['others'] as $skill)
                                 <li class="row d-flex align-items-center justify-content-between">
                                     <div class="col-5">
-                                        <p class="m-0 fs-5">GAS</p>
+                                        <p class="m-0 fs-5">{{$skill->name_en}}</p>
                                     </div>
-                                    <div class="col-7 d-flex justify-content-evenly">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
-                                <li class="row d-flex align-items-center justify-content-between">
-                                    <div class="col-5">
-                                        <p class="m-0 fs-5">VBA</p>
-                                    </div>
-                                    <div class="col-7 d-flex justify-content-evenly">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
+                                    <div class="col-7 d-flex align-items-center justify-content-evenly">
+                                        @for ($i = 1; $i <= 5; $i++) @if ($skill->levels >= $i)
+                                            <span class="ripples"></span>
+                                            @else
+                                            <span></span>
+                                            @endif
+                                            @endfor
                                     </div>
                                 </li>
-                                <li class="row d-flex align-items-center justify-content-between">
-                                    <div class="col-5">
-                                        <p class="m-0 fs-5">TOEIC</p>
-                                    </div>
-                                    <div class="col-7 d-flex justify-content-evenly">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
-                                <li class="row d-flex align-items-center justify-content-between">
-                                    <div class="col-5">
-                                        <p class="m-0 fs-5">Accounting</p>
-                                    </div>
-                                    <div class="col-7 d-flex justify-content-evenly">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -335,55 +259,28 @@
         <p>portfolio</p>
     </div>
     <div class="portfolio row">
+        @foreach ($portfolios as $portfolio)
         <div class="col-md-6 pb-3 pe-3">
             <div class="portfolio-item border-bottom border-end p-5 h-100">
-                <a href="#work-modal" class="work-title fs-4" data-bs-toggle="modal">Coding from XD</a>
+                <a href="#work-modal" class="work-title fs-4" data-bs-toggle="modal">{{ $portfolio->name_en }}</a>
                 <div class="using">
-                    <p>HTML / CSS / jQuery</p>
+                    <p>
+                        @foreach ($portfolio->skills as $skill)
+                            @if ($loop->last)
+                                {{ $skill->name_en }}
+                            @else
+                                {{ $skill->name_en }} /
+                            @endif
+                        @endforeach
+                    </p>
                 </div>
                 <div class="work-comment">
-                    <p><a href=""
-                            class="link-info">クリスタ</a>さんのXDデザインサンプルからのコーディング。<br>ファーストビューのスライドショーは、サンプルコードではjQueryのプラグインを使っていましたが、keyframeでアニメーションを設定して作成しました。
+                    <p>{!! $portfolio->description_jp !!}
                     </p>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 pb-3 pe-3">
-            <div class="portfolio-item border-bottom border-end p-5 h-100">
-                <a href="#work-modal" class="work-title fs-4" data-bs-toggle="modal">Attendance Record</a>
-                <div class="using">
-                    <p>PHP / laravel / HTML / CSS / Bootstrap / jQuery</p>
-                </div>
-                <div class="work-comment">
-                    <p>初めて一から作成したアプリ。<br>ログイン機能はメールアドレスではなくIDを使う形式にし、権限によるルート制御を設定しました。単純な画面推移によるCRUD機能だけではなく、Bootstrapのモーダルを使用しajaxでコンテンツ取得、POST送信などにチャレンジしました。
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 pb-3 pe-3">
-            <div class="portfolio-item border-bottom border-end p-5 h-100">
-                <a href="#work-modal" class="work-title fs-4" data-bs-toggle="modal">Quotation, Order, Invoice managiment
-                    app.</a>
-                <div class="using">
-                    <p>Google Apps Script / Google Spread Sheet</p>
-                </div>
-                <div class="work-comment">
-                    <p>アウトソーシングサイトからの依頼で作成。<br>見積書や注文書を作成し、作成した内容やスプレッドシート上で送信された注文データをデータベース登録、PDF発行というプログラムを組みました。</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 pb-3 pe-3">
-            <div class="portfolio-item border-bottom border-end p-5 h-100">
-                <a href="#work-modal" class="work-title fs-4" data-bs-toggle="modal">Portfolio Site</a>
-                <div class="using">
-                    <p>HTML / CSS / Bootstrap / laravel</p>
-                </div>
-                <div class="work-comment">
-                    <p>このポートフォリオサイト。<br>フォームのバリデーションなど簡単に実装できるためlaravelを利用しました。レイアウトの一部にBootstrapを使用しました。ダイビングが趣味なので海をイメージし、泡などをパララックスに表現しました。
-                    </p>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 <div class="modal fade" id="work-modal" tabindex="-1" role="dialog" aria-labelledby="#portfolio" aria-hidden="true">
@@ -467,4 +364,5 @@
 <div class="bubble" id="bubble_1"></div>
 <div class="bubble" id="bubble_1"></div>
 <div class="bubble" id="bubble_1"></div>
-@endsection
+
+</x-app-layout>

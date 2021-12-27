@@ -318,27 +318,53 @@
     <div class="section-title blue">
         <p>Contact</p>
     </div>
-    <form action="" class="contact-form row justify-content-center">
+    <form action="{{ route('contact') }}#contact" class="contact-form row justify-content-center" method="post">
+        @csrf
+        @if (session('message'))
+            <div class="col-12 alert alert-success">
+                <p>{{session('message') }}</p>
+            </div>
+        @endif
         <div class="col-12">
             <div class="form_name mb-3">
                 <label for="name" class="form-label fs-5">お名前</label>
-                <input class="form-control" type="text" name="name">
+                <input class="form-control @error('name') is-invalid @enderror" type="text" name="name">
+                @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
             <div class="form_email mb-3">
                 <label for="email" class="form-label fs-5">メールアドレス</label>
-                <input class="form-control" type="text" name="email">
+                <input class="form-control @error('email') is-invalid @enderror" type="text" name="email">
+                @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
             <div class="form_type mb-3">
                 <label for="type" class="form-label fs-5">お問い合わせの種類</label>
-                <select class="form-select" name="type" id="">
+                <select class="form-select @error('type') is-invalid @enderror" name="type" id="">
                     <option value="quotation">見積りのご依頼</option>
                     <option value="order">お仕事のご依頼</option>
                     <option value="others">その他</option>
                 </select>
+                @error('type')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
             <div class="form_detail mb-3">
-                <label for="detail" class="form-label fs-5">お問い合わせの内容</label>
+                <label for="detail" class="form-label fs-5 @error('detail') is-invalid @enderror">お問い合わせの内容</label>
                 <textarea class="form-control" name="detail" id="" cols="30" rows="10"></textarea>
+                @error('detail')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
             <div class="form_submit mt-5 text-center">
                 <input class="btn btn-info text-white fs-5" type="submit" value="送信">

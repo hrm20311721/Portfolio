@@ -19,4 +19,5 @@ class Portfolio extends Model
         return $this->belongsToMany(Skill::class,'portfolio_skills','portfolio_id','skill_id');
     }
 
+
 }

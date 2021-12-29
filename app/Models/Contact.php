@@ -25,5 +25,10 @@ class Contact extends Model
         $this->save();
     }
 
+    public function countUnRead()
+    {
+        return $this->where('checked',false)->count();
+    }
+
 
 }

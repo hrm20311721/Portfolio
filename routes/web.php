@@ -24,9 +24,12 @@ Route::post('contacts',[ContactController::class,'create'])->name('contact');
 Route::group(['middleware' => 'auth'],function(){
 
     //管理画面
-    Route::get('/dashboard',function(){
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/admin',function(){
+        return view('admin-top');
+    })->name('admin');
+
+    //問い合わせ一覧
+    Route::get('contacts',[ContactController::class,'index'])->name('contacts.index');
 
 });
 

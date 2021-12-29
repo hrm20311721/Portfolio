@@ -30,5 +30,20 @@ class Contact extends Model
         return $this->where('checked',false)->count();
     }
 
+    public function checked(Int $contact_id)
+    {
+        $this->id = $contact_id;
+        $this->checked = true;
+        $this->update();
+        return;
+    }
+
+    public function unChecked(Int $contact_id)
+    {
+        $this->id = $contact_id;
+        $this->checked = false;
+        $this->update();
+        return;
+    }
 
 }

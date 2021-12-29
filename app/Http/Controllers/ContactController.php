@@ -13,6 +13,8 @@ class ContactController extends Controller
     ///問い合わせ確認
     public function index()
     {
+        $contacts = Contact::all();
+        return view('contacts.index',['contacts' => $contacts]);
     }
 
     //問い合わせ受信
@@ -31,7 +33,16 @@ class ContactController extends Controller
     }
 
     //問い合わせ対応済み
-    public function reply()
+    public function checked(Contact $contact)
     {
+        $contact->checked($contact->id);
+        return back();
+    }
+
+    //問い合わせ未対応
+    public function unChecked(Contact $contact)
+    {
+        $contact->unChecked($contact->id);
+        return back();
     }
 }

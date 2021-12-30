@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SkillController;
 use Faker\Extension\ContainerBuilder;
 use Illuminate\Support\Facades\Route;
 
@@ -30,8 +31,11 @@ Route::group(['middleware' => 'auth'],function(){
 
     //問い合わせ一覧
     Route::get('contacts',[ContactController::class,'index'])->name('contacts.index');
-    Route::put('contacts/{contact}',[ContactController::class,'checked'])->name('contacts.checked');
-    Route::delete('contacts/{contact}',[ContactController::class,'unChecked'])->name('contacts.unChecked');
+    //問い合わせ対応チェック
+    Route::put('contacts/{contact}',[ContactController::class,'checked'])->name('contacts.check');
+
+    //スキル関連
+    Route::resource('skills', SkillController::class);
 
 });
 

@@ -38,33 +38,17 @@
                             <td class="py-4 px-6 border-b border-grey-light">{{ $contact->type }}</td>
                             <td class="py-4 px-6 border-b border-grey-light">{{ $contact->detail }}</td>
                             <td class="py-4 px-6 border-b border-grey-light flex justify-center">
-                                @if ($contact->checked)
-                                    <form action="{{url('contacts/'.$contact->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit"
-                                            class="py-1 px-3 rounded text-xs text-green-400 hover:text-gray-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                                class="bi bi-check-circle-fill fill-current" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                            </svg>
-                                        </button>
-                                    </form>
-                                @else
-                                    <form action="{{url('contacts/'.$contact->id) }}" method="POST">
-                                        @csrf
-                                        @method('PUT')
-                                        <button type="submit"
-                                            class="py-1 px-3 rounded text-xs text-gray-400 hover:text-green-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                                class="bi bi-check-circle-fill fill-current" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                            </svg>
-                                        </button>
-                                    </form>
-                                @endif
+                                <form action="{{url('contacts/'.$contact->id) }}" method="POST">
+                                    @csrf
+                                    @method('PUT')
+                                    <button type="submit" class="py-1 px-3 rounded text-xs @if($contact->checked) text-green-400 hover:text-gray-400 @else text-gray-400 hover:text-green-400 @endif">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-check-circle-fill fill-current" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                        </svg>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

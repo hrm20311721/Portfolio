@@ -32,17 +32,16 @@ class ContactController extends Controller
         return redirect('/')->with('message','お問い合わせありがとうございます。');
     }
 
-    //問い合わせ対応済み
+    //問い合わせ対応
     public function checked(Contact $contact)
     {
-        $contact->checked($contact->id);
+        if ($contact->checked)
+        {
+            $contact->unChecked($contact->id);
+        } else {
+            $contact->checked($contact->id);
+        }
         return back();
     }
 
-    //問い合わせ未対応
-    public function unChecked(Contact $contact)
-    {
-        $contact->unChecked($contact->id);
-        return back();
-    }
 }

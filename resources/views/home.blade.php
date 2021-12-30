@@ -392,3 +392,4 @@
 <div class="bubble" id="bubble_1"></div>
 
 </x-app-layout>
+<x-footer></x-footer>

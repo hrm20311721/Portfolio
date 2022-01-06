@@ -57,5 +57,30 @@ window.onload = function() {
             $('#work-modal').modal('show');
         });
 
+        $('#edit-modal').on('show.bs.modal', function (e) {
+            let skill_id = $(e.relatedTarget).val();
+            $.ajax({
+                url: 'skills/' + skill_id,
+            }).done(function (data) {
+                /** カテゴリｰ */
+                $('#category option').each(function () {
+                    if ($(this).val() == data.category) {
+                        $(this).attr('selected', 'selected');
+                    }
+                });
+                /** レベル */
+                $('#levels option').each(function () {
+                    if ($(this).val() == data.levels) {
+                        $(this).attr('selected', 'selected');
+                    }
+                });
+                /** スキル名 */
+                $('#name_en').val(data.name_en);
+                $('#name_jp').val(data.name_jp);
+
+                $('#skills_update').attr('action', 'skills/' + data.id);
+            });
+        });
+
     });
 }

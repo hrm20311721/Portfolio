@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="row justify-center mb-3">
             <div class="col-md-4">
-                <a href="#!" class="bg-white overflow-hidden shadow-sm sm:rounded-lg h-80 flex flex-col justify-center align-items-center cursor-pointer hover:text-green-500">
+                <a href="{{ route('contacts.index') }}" class="bg-white overflow-hidden shadow-sm sm:rounded-lg h-80 flex flex-col justify-center align-items-center cursor-pointer hover:text-green-500">
                     <div class="justify-center flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-mailbox"
                             viewBox="0 0 16 16">
@@ -16,7 +16,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="#!"
+                <a href="{{ route('skills.create') }}"
                     class="bg-white overflow-hidden shadow-sm sm:rounded-lg h-80 flex flex-col justify-center align-items-center cursor-pointer hover:text-green-500">
                     <div class="justify-center flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-graph-up"

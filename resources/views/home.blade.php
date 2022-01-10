@@ -46,7 +46,7 @@
     </div>
     <div class="row align-items-center about-content">
         <div class="col-4 py-5 profile-picture">
-            <img src="{{ asset('storage/img/IMG_4691_square.jpg')}}" alt="profile picture" class="rounded-circle w-100">
+            <img src="{{ asset('storage/img/IMG_4691_square.JPG')}}" alt="profile picture" class="rounded-circle w-100">
         </div>
         <div class="col-8 p-5 about-text">
             <p class="profile-name display-6">hrm20311721</p>

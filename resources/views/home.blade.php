@@ -2,7 +2,7 @@
 <!-- ========== Start fv ========== -->
 <div class="fv" id="fv">
     <div class="fv-copy">
-        <p class="fv-main-copy">hrm<br>2031<br>1721</p>
+        <img src="{{ asset('storage/img/LOGO_hy_p-10.png') }}" alt="" width="500px">
         <p class="fv-sub-copy">Thank you for visiting my Portfolio.</p>
     </div>
     <div class="d-flex justify-content-end align-items-center">

@@ -25,6 +25,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{{ asset('storage/favicon.ico') }}">
     </head>
     <body>
         <header class="header container-lg">
